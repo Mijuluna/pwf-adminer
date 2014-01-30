@@ -1,0 +1,16 @@
+{
+	"name":"pwf-models-adminer",
+	"main":"lib/include.js",
+	"ignore":[
+		"test",
+		"LICENSE",
+		"README.md",
+		".gitignore",
+		"node_modules"
+	],
+	"dependencies":{
+		"pwf-models-schema":"*",
+		"pwf-locales":"*",
+		"pwf-form":"*"
+	}
+}
