@@ -1,0 +1,24 @@
+.adminer-table {
+	width:100%;
+	font-size:12px;
+}
+
+.adminer-table th,
+.adminer-table td
+{
+	text-align:left;
+	padding:5px 10px;
+}
+
+.adminer-table th {
+	font-weight:bold;
+}
+
+
+.adminer-table tbody td {
+	background:#f6f6f6;
+}
+
+.adminer-table tbody tr.odd td {
+	background:#e6e6e6;
+}
