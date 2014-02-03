@@ -4,7 +4,9 @@
 }
 
 .adminer-table th,
-.adminer-table td
+.adminer-table td,
+.adminer-info .attr-list .label,
+.adminer-info .attr-list .attr-val-html
 {
 	text-align:left;
 	padding:5px 10px;
@@ -15,10 +17,39 @@
 }
 
 
+.adminer-info .attr-list li,
 .adminer-table tbody td {
 	background:#f6f6f6;
 }
 
-.adminer-table tbody tr.odd td {
+.adminer-table .actions .icon {
+	margin-right:3px;
+	cursor:pointer;
+	opacity:.8;
+}
+
+.adminer-table .actions .icon:hover {
+	opacity:1;
+}
+
+.adminer-table .actions .icon:last-child {
+	margin-right:0;
+}
+
+.adminer-info .label {
+	font-weight:bold;
+}
+
+.adminer-info .label,
+.adminer-info .attr-val-html
+{
+	display:inline-block;
+	font-size:12px;
+	vertical-align:top;
+}
+
+.adminer-table tbody tr.odd td,
+.adminer-info .attr-list .odd
+{
 	background:#e6e6e6;
 }
