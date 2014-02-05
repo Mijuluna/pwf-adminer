@@ -1,6 +1,6 @@
 {
 	"name":"pwf-models-adminer",
-	"version":"0.1.1",
+	"version":"0.1.2",
 	"description":"Module that creates lists, filters, edit forms to manage pwf models",
 	"author":"just-paja <just-paja@gmail.com>",
 	"license":"GPLv3",
