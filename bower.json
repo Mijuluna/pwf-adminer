@@ -1,5 +1,5 @@
 {
-	"name":"pwf-models-adminer",
+	"name":"pwf-adminer",
 	"main":"lib/include.js",
 	"ignore":[
 		"test",
