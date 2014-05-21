@@ -11,6 +11,8 @@
 	"dependencies":{
 		"pwf-models-schema":"*",
 		"pwf-locales":"*",
-		"pwf-form-models":"*"
+		"pwf-form-models":"*",
+		"pwf-input-collection":">=0.2.0",
+		"pwf-input-file":">0.2.0"
 	}
 }

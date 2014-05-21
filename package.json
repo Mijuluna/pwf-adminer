@@ -9,7 +9,9 @@
 		"pwf-models":">=0.4.2",
 		"pwf-models-schema":"*",
 		"pwf-locales":"*",
-		"pwf-form":"*"
+		"pwf-form":"*",
+		"pwf-input-file":"*",
+		"pwf-input-collection":"*"
 	},
 	"devDependencies":{
 		"pwf.js":"*"
