@@ -9,6 +9,7 @@
 		"node_modules"
 	],
 	"dependencies":{
+		"pwf.js":">1.4",
 		"pwf-models-schema":"*",
 		"pwf-locales":"*",
 		"pwf-form-models":"*",

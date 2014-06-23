@@ -6,15 +6,13 @@
 	"license":"GPLv3",
 	"main":"./lib/include.js",
 	"dependencies":{
+		"pwf.js":">1.4",
 		"pwf-models":">=0.4.2",
 		"pwf-models-schema":"*",
 		"pwf-locales":"*",
 		"pwf-form":"*",
 		"pwf-input-file":"*",
 		"pwf-input-collection":"*"
-	},
-	"devDependencies":{
-		"pwf.js":"*"
 	},
 	"license":"GPLv3",
 	"scripts":{
