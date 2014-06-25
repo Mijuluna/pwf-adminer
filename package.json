@@ -21,5 +21,15 @@
 	"repository":{
 		"type":"git",
 		"url":"https://github.com/just-paja/pwf-adminer.git"
-	}
+	},
+
+	"files":[
+		"lib/adminer/abstract/common",
+		"lib/adminer/abstract/object",
+		"lib/adminer/list",
+		"lib/adminer/obvious",
+		"lib/adminer/editor",
+		"lib/adminer/destroyer",
+		"lib/adminer"
+	]
 }
