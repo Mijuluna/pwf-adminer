@@ -54,7 +54,7 @@ So here use from fudjan template. Fudjan includes all files defined librarys' pa
 
 ## Usage
 
-Adminer is separated into 5 objects that handle operations. Adminer, List, Obvious, Editor, Destroyer
+Adminer is separated into 5 objects that handle operations. [Adminer](#adminer), [List](#list), [Obvious](#obvious), [Editor](#editor) and [Destroyer](#destroyer)
 
 ### Adminer
 This is only a wrapper for remaining four objects. It renders them inside of itself with nice menu.
@@ -70,7 +70,6 @@ Clears content and shows editor for new object with ```data```. Calls ```next```
 
 #### adminer#edit(obj, next)
 Clears content and shows editor for passed object ```obj```. Calls ```next``` in context of new editor when loaded and rendered.
-
 ```obj``` accepts integer as well as model instance
 
 #### adminer#drop(obj, next)
