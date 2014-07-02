@@ -149,6 +149,26 @@ Returns data object to be passed to [form](http://github.com/just-paja/pwf-form)
 
 
 ## Destroyer
+DOM object capable of preloading model instance data and relations and displaying simple prompt with question "Do you really want to delete this?". It inherits from [adminer.abstract.object](#adminerabstractobject).
+
+### Attributes
+```javascript
+{
+	// Callback after drop request - successful or otherwise
+	'after_drop':function(err, data) {
+		console.log(this.get_url());
+	},
+	
+	// List of button definitions
+	'buttons':[]
+}
+```
+
+### get_url()
+Returns URL to send the drop request to
+
+### drop(next)
+Send drop request to the server
 
 
 ## Abstraction
