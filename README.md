@@ -21,35 +21,30 @@ bower install pwf-adminer
 Adminer has a lot of dependencies, so it might look very ugly using static HTML. When using frameworks like [fudjan](https://github.com/just-paja/fudjan) or [django](https://github.com/just-paja/django-rape) can simplify the inclusion a lot. Remember, that good guys concatenate and minify their javascripts.
 
 So here use from fudjan template. Fudjan includes all files defined librarys' package.json.
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <?
-      $ren->content_for('scripts', 'bower/jquery/dist/jquery.js');
-      $ren->content_for('scripts', 'bower/moment/moment.js');
-      $ren->content_for('scripts', 'bower/async/lib/async.js');
+```php
+<?php
+  $ren->content_for('scripts', 'bower/jquery/dist/jquery.js');
+	$ren->content_for('scripts', 'bower/moment/moment.js');
+	$ren->content_for('scripts', 'bower/async/lib/async.js');
 
-      $ren->content_for('scripts', 'bower/pwf.js');
-      $ren->content_for('scripts', 'bower/pwf-jquery-compat');
-      $ren->content_for('scripts', 'bower/pwf-moment-compat');
-      $ren->content_for('scripts', 'bower/pwf-async-compat');
-      
-      $ren->content_for('scripts', 'bower/pwf-config');
-      $ren->content_for('scripts', 'bower/pwf-queue');
-      $ren->content_for('scripts', 'bower/pwf-locales');
-      $ren->content_for('scripts', 'bower/pwf-comm');
-      $ren->content_for('scripts', 'bower/pwf-comm-form');
-      $ren->content_for('scripts', 'bower/pwf-form');
-      $ren->content_for('scripts', 'bower/pwf-form-models');
-      $ren->content_for('scripts', 'bower/pwf-models');
-      $ren->content_for('scripts', 'bower/pwf-models-schema');
-      
-      $ren->content_for('scripts', 'bower/pwf-input-file');
-      $ren->content_for('scripts', 'bower/pwf-input-autocompleter');
-      $ren->content_for('scripts', 'bower/pwf-input-collection');
-  </head>
-</html>
+	$ren->content_for('scripts', 'bower/pwf.js');
+	$ren->content_for('scripts', 'bower/pwf-jquery-compat');
+	$ren->content_for('scripts', 'bower/pwf-moment-compat');
+	$ren->content_for('scripts', 'bower/pwf-async-compat');
+	
+	$ren->content_for('scripts', 'bower/pwf-config');
+	$ren->content_for('scripts', 'bower/pwf-queue');
+	$ren->content_for('scripts', 'bower/pwf-locales');
+	$ren->content_for('scripts', 'bower/pwf-comm');
+	$ren->content_for('scripts', 'bower/pwf-comm-form');
+	$ren->content_for('scripts', 'bower/pwf-form');
+	$ren->content_for('scripts', 'bower/pwf-form-models');
+	$ren->content_for('scripts', 'bower/pwf-models');
+	$ren->content_for('scripts', 'bower/pwf-models-schema');
+	
+	$ren->content_for('scripts', 'bower/pwf-input-file');
+	$ren->content_for('scripts', 'bower/pwf-input-autocompleter');
+	$ren->content_for('scripts', 'bower/pwf-input-collection');
 ```
 
 ## Usage
