@@ -70,25 +70,24 @@ Clears content and shows new destroyer object for ```obj```. Calls ```next``` in
 
 
 ## List
-DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from ```model.list```, [adminer.abstract.common](adminerabstractcommon) and [adminer.abstract.filters](#adminerabstractfilters).
+DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from [model.list](http://github.com/just-paja/pwf-model), [adminer.abstract.common](adminerabstractcommon) and [adminer.abstract.filters](#adminerabstractfilters).
 
-List object attrs
+### Attributes
+List has no own attributes. Everything is inherited. Here is an example config
 ```javascript
 {
- // Name of model to be listed
- 'model':'NameOfYourModel',
- 
- // List of actions to render right of item. Column will be omitted if null
- // or empty
- 'actions':['info', 'edit', 'drop']
- 
- // List of attributes (strings) to display for each item on the list. Displays 
- // all if null.
- 'attrs':['name_first', 'name_last', 'birth_date']
- 
- // List of attributes (strings) to exclude from display. Has higher priority
- // than 'attrs'. This example never displays birth_date
- 'exclude':['birth_date']
+	'parent':pwf.jquery('body'),
+	'model':'NameOfYourModel',
+	'attrs':null,
+	'actions':['edit', 'drop'],
+	'exclude':['name', 'created_at'],
+	'filters':[{'attr':'ass', 'type':'gte', 'gte':50}],
+	'ui_filters':['name'],
+	'page':0,
+	'per_page':5,
+	'on_load':function() {
+ 		v('hello');
+	}
 }
 ```
 
@@ -175,7 +174,24 @@ Send drop request to the server
 Objects used to inherit from. They mostly have protected methods.
 
 ### adminer.abstract.common
-Used for all adminer objects.
+Used for all adminer objects. It inherits from [domel](http://github.com/just-paja/pwf.js) and [caller](http://github.com/just-paja/pwf.js).
+
+#### Attributes
+```javascript
+{
+	// List of actions to render right of item. Column will be omitted if null
+	// or empty
+	'actions':['info', 'edit', 'drop']
+ 
+	// List of attributes (strings) to display for each item on the list. Displays 
+	// all if null.
+	'attrs':['name_first', 'name_last', 'birth_date']
+ 
+	// List of attributes (strings) to exclude from display. Has higher priority
+	// than 'attrs'. This example never displays birth_date
+	'exclude':['birth_date']
+}
+```
 
 #### get_attrs()
 Returns list of definitions of attributes to use
@@ -211,7 +227,7 @@ Options are passed directly to input. There are two special options.
 ```
 
 ### adminer.abstract.object
-Used for all adminer objects that work with one item
+Used for all adminer objects that work with one item. It inherits from [adminer.abstract.common](#adminerabstractcommon).
 
 #### Attributes
 ```javascript
