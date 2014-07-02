@@ -1,8 +1,6 @@
-# pwf-models-adminer
-
 Tool for simple model manipulation. Able to create lists with filters and pagination, editors and other detailed views used to manage database model data
 
-## Requirements
+# Requirements
 
 List of base requirements. Remember that these libs require something as well.
 
@@ -12,7 +10,7 @@ List of base requirements. Remember that these libs require something as well.
 * [pwf-input-file](https://github.com/just-paja/pwf-input-file)
 * [pwf-input-collection](https://github.com/just-paja/pwf-input-collection)
  
-## Install
+# Install
 
 ```bash
 bower install pwf-adminer
@@ -47,30 +45,31 @@ So here use from fudjan template. Fudjan includes all files defined librarys' pa
 	$ren->content_for('scripts', 'bower/pwf-input-collection');
 ```
 
-## Usage
+# Usage
 
 Adminer is separated into 5 objects that handle operations. [Adminer](#adminer), [List](#list), [Obvious](#obvious), [Editor](#editor) and [Destroyer](#destroyer)
 
-### Adminer
+## Adminer
 This is only a wrapper for remaining four objects. It renders them inside of itself with nice menu.
 
-#### adminer#clear()
+### adminer#clear()
 Clears adminers' content
 
-#### adminer#list(next)
+### adminer#list(next)
 Clears content and load list of objects. Calls next in context of new list when finished.
 
-#### adminer#create(data, next)
+### adminer#create(data, next)
 Clears content and shows editor for new object with ```data```. Calls ```next``` in context of new editor when finished.
 
-#### adminer#edit(obj, next)
+### adminer#edit(obj, next)
 Clears content and shows editor for passed object ```obj```. Calls ```next``` in context of new editor when loaded and rendered.
 ```obj``` accepts integer as well as model instance
 
-#### adminer#drop(obj, next)
+### adminer#drop(obj, next)
 Clears content and shows new destroyer object for ```obj```. Calls ```next``` in context of new destroyer when preloaded and rendered.
 
-### List
+
+## List
 DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from ```model.list```, [adminer.abstract.common](adminerabstractcommon) and [adminer.abstract.filters](#adminerabstractfilters).
 
 List object attrs
@@ -94,14 +93,14 @@ List object attrs
 ```
 
 
-### Obvious
+## Obvious
 DOM object capable of loading and displaying structure of data of model instance with predefined attributes. It inherits from [adminer.abstract.object](#adminerabstractobject).
 
 
-### Editor
+## Editor
 DOM object capable of displaying object editor and preloading necessary data. It inherits from [adminer.abstract.object](#adminerabstractobject).
 
-#### Attributes
+### Attributes
 ```javascript
 {
 	// List of attributes to replace for input definition of attr
@@ -117,7 +116,7 @@ DOM object capable of displaying object editor and preloading necessary data. It
 }
 ```
 
-#### get_inputs()
+### get_inputs()
 Returns list of input definitions as defined by user.
 
 ```
@@ -133,38 +132,38 @@ console.log(editor.get_inputs());
 ]
 ```
 
-#### get_attr_input_extra(name)
+### get_attr_input_extra(name)
 Returns data from ```#inputs``` attr if available for ```name``` or null
 
-#### get_buttons()
+### get_buttons()
 Returns list of button definitions
 
-#### get_calls()
+### get_calls()
 Returns form callbacks for this object
 
-#### get_url()
+### get_url()
 Returns URL to send POST to.
 
-#### get_form_data()
+### get_form_data()
 Returns data object to be passed to [form](http://github.com/just-paja/pwf-form) created inside
 
 
-### Destroyer
+## Destroyer
 
 
-### Abstraction
+## Abstraction
 Objects used to inherit from. They mostly have protected methods.
 
-#### adminer.abstract.common
+### adminer.abstract.common
 Used for all adminer objects.
 
-##### get_attrs()
+#### get_attrs()
 Returns list of definitions of attributes to use
 
-#### adminer.abstract.filters
+### adminer.abstract.filters
 Used only for ```adminer.list```. Creates filters according to definition passed to ```ui_filters```. To decide which input will be shown, `form.input_from_attr` is used.
 
-Attributes
+#### Attributes
 ```javascript
 {
  // List of attribute names (string) or input definitions (Object)
@@ -176,7 +175,7 @@ Attributes
 }
 ```
 
-##### Input definition
+#### Input definition
 Options are passed directly to input. There are two special options.
 
 ```javascript
@@ -191,10 +190,10 @@ Options are passed directly to input. There are two special options.
 }
 ```
 
-#### adminer.abstract.object
+### adminer.abstract.object
 Used for all adminer objects that work with one item
 
-Attributes
+#### Attributes
 ```javascript
 {
  // Should this object reload all data after some operation (save/drop)
