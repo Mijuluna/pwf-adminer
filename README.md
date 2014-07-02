@@ -23,7 +23,7 @@ Adminer has a lot of dependencies, so it might look very ugly using static HTML.
 So here use from fudjan template. Fudjan includes all files defined librarys' package.json.
 ```php
 <?php
-  $ren->content_for('scripts', 'bower/jquery/dist/jquery.js');
+	$ren->content_for('scripts', 'bower/jquery/dist/jquery.js');
 	$ren->content_for('scripts', 'bower/moment/moment.js');
 	$ren->content_for('scripts', 'bower/async/lib/async.js');
 
