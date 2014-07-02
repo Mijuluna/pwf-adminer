@@ -94,6 +94,7 @@ List object attrs
 ```
 
 ### Obvious
+DOM object capable of loading and displaying structure of data of model instance with predefined attributes. It inherits from [adminer.abstract.object](#adminerabstractobject).
 
 ### Editor
 
