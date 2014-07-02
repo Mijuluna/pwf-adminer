@@ -76,9 +76,88 @@ Clears content and shows editor for passed object ```obj```. Calls ```next``` in
 Clears content and shows new destroyer object for ```obj```. Calls ```next``` in context of new destroyer when preloaded and rendered.
 
 ### List
+DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from ```model.list```, ```adminer.abstract.common``` and ```adminer.abstract.filters```.
+
+List object attrs
+```javascript
+{
+ // Name of model to be listed
+ 'model':'NameOfYourModel',
+ 
+ // List of actions to render right of item. Column will be omitted if null
+ // or empty
+ 'actions':['info', 'edit', 'drop']
+ 
+ // List of attributes (strings) to display for each item on the list. Displays 
+ // all if null.
+ 'attrs':['name_first', 'name_last', 'birth_date']
+ 
+ // List of attributes (strings) to exclude from display. Has higher priority
+ // than 'attrs'. This example never displays birth_date
+ 'exclude':['birth_date']
+}
+```
 
 ### Obvious
 
 ### Editor
 
 ### Destroyer
+
+### Abstraction
+Objects used to inherit from. They mostly have protected methods.
+
+#### adminer.abstract.common
+Used for all adminer objects.
+
+##### get_attrs()
+Returns list of definitions of attributes to use
+
+#### adminer.abstract.filters
+Used only for ```adminer.list```. Creates filters according to definition passed to ```ui_filters```. To decide which input will be shown, `form.input_from_attr` is used.
+
+Attributes
+```javascript
+{
+ // List of attribute names (string) or input definitions (Object)
+ 'ui_filters':[
+  'name', 'birth_date', {
+   // ... input definition
+  }
+ ]
+}
+```
+
+##### Input definition
+Options are passed directly to input. There are two special options.
+
+```javascript
+{
+ // An OR query will be generated for value of this input
+ 'attrs':['list', 'of', 'attribute', 'names'],
+ 
+ // This function will be used to determine the input value
+ 'get_filter':function() {
+  return this.val();
+ }
+}
+```
+
+#### adminer.abstract.object
+Used for all adminer objects that work with one item
+
+Attributes
+```javascript
+{
+ // Should this object reload all data after some operation (save/drop)
+ // The reload time counts before firing after_load
+ 'reload':false,
+  
+ // Object to examine. Can be ID or model instance
+ 'item':1,
+ 
+ // List of relations to preload before firing after_load
+ 'preload':['this_model_relation_attr_name', 'this_model_relation.related_relation']
+}
+```
+
