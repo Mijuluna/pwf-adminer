@@ -76,7 +76,7 @@ Clears content and shows editor for passed object ```obj```. Calls ```next``` in
 Clears content and shows new destroyer object for ```obj```. Calls ```next``` in context of new destroyer when preloaded and rendered.
 
 ### List
-DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from ```model.list```, ```adminer.abstract.common``` and ```adminer.abstract.filters```.
+DOM object capable of loading and displaying table of model instance objects with predefined attributes, filters and pagination. It inherits from ```model.list```, [adminer.abstract.common](adminerabstractcommon) and [adminer.abstract.filters](#adminerabstractfilters).
 
 List object attrs
 ```javascript
