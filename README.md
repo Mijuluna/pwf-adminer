@@ -93,12 +93,64 @@ List object attrs
 }
 ```
 
+
 ### Obvious
 DOM object capable of loading and displaying structure of data of model instance with predefined attributes. It inherits from [adminer.abstract.object](#adminerabstractobject).
 
+
 ### Editor
+DOM object capable of displaying object editor and preloading necessary data. It inherits from [adminer.abstract.object](#adminerabstractobject).
+
+#### Attributes
+```javascript
+{
+	// List of attributes to replace for input definition of attr
+	'inputs':{
+		'name':{
+			'type':'text',
+			'max_length':15
+		}
+	},
+	
+	// List of button definition
+	'buttons':[]
+}
+```
+
+#### get_inputs()
+Returns list of input definitions as defined by user.
+
+```
+console.log(editor.get_inputs());
+
+[
+	{
+		'type':'text',
+		'name':'name',
+		'required':true
+	},
+	...
+]
+```
+
+#### get_attr_input_extra(name)
+Returns data from ```#inputs``` attr if available for ```name``` or null
+
+#### get_buttons()
+Returns list of button definitions
+
+#### get_calls()
+Returns form callbacks for this object
+
+#### get_url()
+Returns URL to send POST to.
+
+#### get_form_data()
+Returns data object to be passed to [form](http://github.com/just-paja/pwf-form) created inside
+
 
 ### Destroyer
+
 
 ### Abstraction
 Objects used to inherit from. They mostly have protected methods.
