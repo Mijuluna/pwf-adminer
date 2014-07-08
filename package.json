@@ -27,6 +27,7 @@
 		"lib/adminer/abstract/common",
 		"lib/adminer/abstract/object",
 		"lib/adminer/abstract/filters",
+		"lib/adminer/map",
 		"lib/adminer/list",
 		"lib/adminer/obvious",
 		"lib/adminer/editor",
