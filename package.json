@@ -23,7 +23,7 @@
 		"url":"https://github.com/just-paja/pwf-adminer.git"
 	},
 
-	"files":[
+	"include":[
 		"lib/adminer/abstract/common",
 		"lib/adminer/abstract/object",
 		"lib/adminer/abstract/filters",
