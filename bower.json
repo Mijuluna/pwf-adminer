@@ -1,6 +1,5 @@
 {
 	"name":"pwf-adminer",
-	"main":"lib/include.js",
 	"ignore":[
 		"test",
 		"LICENSE",
