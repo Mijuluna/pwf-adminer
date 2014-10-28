@@ -9,7 +9,7 @@
 	],
 	"dependencies":{
 		"pwf.js":">=1.7",
-		"pwf-models-schema":"*",
+		"pwf-models-schema":">=0.2",
 		"pwf-locales":"*",
 		"pwf-form-models":"*",
 		"pwf-input-collection":">=0.2.0",
