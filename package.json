@@ -6,12 +6,17 @@
 	"license":"GPLv3",
 	"main":"./lib/include.js",
 	"dependencies":{
-		"pwf.js":">=1.7",
-		"pwf-models-schema":">=0.2",
+		"pwf.js":"~1.7",
+		"pwf-async-compat":"~0.2",
+		"pwf-models-schema":"~0.2",
 		"pwf-locales":"*",
 		"pwf-form":"*",
+		"pwf-input-date":"*",
 		"pwf-input-file":"*",
 		"pwf-input-collection":"*"
+	},
+	"devDependencies":{
+		"jsdom":"*"
 	},
 	"license":"GPLv3",
 	"scripts":{
